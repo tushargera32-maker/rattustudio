@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.rattustudio.in/sitemap.xml
+Sitemap: https://rattustudio.in/sitemap.xml
