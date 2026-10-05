@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brand Hub — Mens • Womens • Kids Fashion | Jalandhar</title>
+<meta name="description" content="Brand Hub Jalandhar — Clothing & accessories for mens, womens & kids. Shop on WhatsApp.">
+<meta name="theme-color" content="#F6F5F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --acc:#FF4D00; --ink:#131313; --muted:#7B766B;
+  --paper:#F6F5F1; --card:#FFFFFF; --line:#E7E2D6;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",system-ui,-apple-system,sans-serif;background:#DDD9CC;color:var(--ink);min-height:100vh;min-height:100dvh;-webkit-font-smoothing:antialiased}
+.page{max-width:480px;margin:0 auto;min-height:100vh;min-height:100dvh;background:var(--paper);box-shadow:0 0 60px rgba(30,25,15,.18);overflow:hidden;position:relative}
+/* COVER */
+.cover{position:relative;height:210px;overflow:hidden;background:#131313}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.30),rgba(0,0,0,0) 45%,rgba(246,245,241,.72) 82%,var(--paper))}
+.topbar{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:calc(10px + env(safe-area-inset-top)) 14px 10px}
+.pill{font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.35);color:#fff;padding:7px 11px;border-radius:100px}
+.sharebtn{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.5);color:#fff;font-size:16px;cursor:pointer}
+/* PROFILE */
+.main{padding:0 14px calc(104px + env(safe-area-inset-bottom));margin-top:-46px;position:relative;z-index:2;animation:rise .6s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.brandrow{display:flex;align-items:center;gap:12px;text-align:left}
+.mark{width:72px;height:72px;min-width:72px;border-radius:22px;background:var(--ink);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:0 8px 20px rgba(0,0,0,.25);line-height:1}
+.mark b{font-family:"Archivo",sans-serif;font-size:15px;font-weight:900;letter-spacing:.5px}
+.mark b i{font-style:normal;color:var(--acc)}
+.mark small{font-size:7.5px;letter-spacing:2.5px;color:#fff;opacity:.75;margin-top:3px}
+h1{font-family:"Archivo",sans-serif;font-size:25px;font-weight:900;letter-spacing:.5px;line-height:1}
+h1 span{color:var(--acc)}
+.tag{font-size:12.5px;font-weight:700;margin-top:4px}
+.sub{font-size:12.5px;color:var(--muted);margin-top:2px}
+/* CTA ROW */
+.ctarow{display:grid;grid-template-columns:1.4fr 1fr;gap:8px;margin-top:14px}
+.cta{display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;border-radius:14px;text-decoration:none;font-weight:800;font-size:14.5px}
+.cta.wa{background:#25D366;color:#fff;box-shadow:0 8px 18px rgba(37,211,102,.35)}
+.cta.call{background:var(--ink);color:#fff}
+.cta:active{transform:scale(.98)}
+/* CATEGORY CARDS */
+.h{font-family:"Archivo",sans-serif;font-size:13px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;margin:18px 2px 10px;display:flex;align-items:center;gap:8px}
+.h::after{content:"";flex:1;height:2px;background:var(--ink);opacity:.12;border-radius:2px}
+.h i{font-style:normal;color:var(--acc)}
+.cats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.cat{position:relative;border-radius:16px;overflow:hidden;text-decoration:none;display:block;height:168px;background:#222}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cat::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,.78))}
+.cat span{position:absolute;left:8px;right:8px;bottom:8px;z-index:2;color:#fff;font-family:"Archivo",sans-serif;font-weight:900;font-size:13px;line-height:1.25}
+.cat small{display:block;font-family:"Inter",sans-serif;font-weight:600;font-size:10px;opacity:.8}
+/* REELS */
+.reels{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 8px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.reels::-webkit-scrollbar{display:none}
+.reel{position:relative;min-width:124px;width:124px;height:190px;border-radius:14px;overflow:hidden;scroll-snap-align:start;background:#222;display:block;text-decoration:none}
+.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(0,0,0,.8))}
+.play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--ink)}
+.reel span{position:absolute;left:8px;right:8px;bottom:7px;z-index:2;color:#fff;font-size:10.5px;font-weight:700}
+/* LINKS */
+.lnk{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-height:60px;margin-bottom:8px;color:var(--ink);text-decoration:none;font-weight:700;font-size:14px;box-shadow:0 3px 10px rgba(30,25,15,.06)}
+.lnk:active{transform:scale(.99);border-color:var(--acc)}
+.lnk .e{width:38px;height:38px;min-width:38px;border-radius:11px;background:var(--ink);display:flex;align-items:center;justify-content:center}
+.lnk .e svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:1.9}
+.lnk small{display:block;font-weight:500;color:var(--muted);font-size:11.5px}
+.lnk .a{margin-left:auto;color:var(--acc);font-weight:900}
+.ghost{display:flex;align-items:center;justify-content:center;gap:8px;border:1.5px dashed #C9C2B2;color:var(--ink);border-radius:14px;padding:13px;min-height:52px;font-weight:700;font-size:13px;background:transparent;cursor:pointer;font-family:inherit;width:100%;margin-top:8px}
+footer{text-align:center;color:#A39B88;font-size:11.5px;margin:18px 0 2px;line-height:1.7}
+footer a{color:var(--acc);text-decoration:none;font-weight:700}
+/* sticky bar */
+.bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:rgba(246,245,241,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1fr;gap:8px;z-index:10}
+.bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:13px;text-decoration:none;font-weight:800;font-size:14.5px}
+.bar .call{background:var(--ink);color:#fff}
+.bar .wa{background:#25D366;color:#fff}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="cover">
+    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=60" alt="Brand Hub store" fetchpriority="high" onerror="this.style.display='none'">
+    <div class="topbar">
+      <span class="pill">Jalandhar • Fashion</span>
+      <button class="sharebtn" onclick="sharePage()" aria-label="Share">↗</button>
+    </div>
+  </div>
+  <div class="main">
+    <div class="brandrow">
+      <div class="mark"><b>B<i>H</i></b><small>HUB</small></div>
+      <div>
+        <h1>BRAND <span>HUB</span></h1>
+        <div class="tag">Mens • Womens • Kids — Clothing & Accessories</div>
+        <div class="sub">Trending fashion, honest prices. Jalandhar.</div>
+      </div>
+    </div>
+
+    <div class="ctarow">
+      <a class="cta wa" href="https://wa.me/919779312001?text=Hi%20Brand%20Hub!%20I%20want%20to%20shop%20your%20latest%20collection." target="_blank" rel="noopener">Shop on WhatsApp</a>
+      <a class="cta call" href="tel:+919779312001">Call Store</a>
+    </div>
+
+    <div class="h">Shop by category <i>→</i></div>
+    <div class="cats">
+      <a class="cat" href="https://wa.me/919779312001?text=Hi%20Brand%20Hub!%20Show%20me%20your%20MENS%20collection." target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=60" alt="Menswear" onerror="this.style.display='none'"><span>Menswear<small>Shirts • Jeans • More</small></span>
+      </a>
+      <a class="cat" href="https://wa.me/919779312001?text=Hi%20Brand%20Hub!%20Show%20me%20your%20WOMENS%20collection." target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400&q=60" alt="Womenswear" onerror="this.style.display='none'"><span>Womenswear<small>Tops • Dresses • More</small></span>
+      </a>
+      <a class="cat" href="https://wa.me/919779312001?text=Hi%20Brand%20Hub!%20Show%20me%20your%20KIDS%20collection." target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=400&q=60" alt="Kids wear" onerror="this.style.display='none'"><span>Kids Wear<small>Boys • Girls • Baby</small></span>
+      </a>
+    </div>
+
+    <div class="h">Latest reels <i>→</i></div>
+    <div class="reels">
+      <a class="reel" href="https://www.instagram.com/brand.hub.in/reels/" target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=400&q=60" alt="New drop" onerror="this.style.display='none'"><span class="play">▶</span><span>New Drop 🔥</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/brand.hub.in/reels/" target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=400&q=60" alt="Store tour" onerror="this.style.display='none'"><span class="play">▶</span><span>Store Tour</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/brand.hub.in/reels/" target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=400&q=60" alt="Combos" onerror="this.style.display='none'"><span class="play">▶</span><span>Combo Deals</span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/brand.hub.in/reels/" target="_blank" rel="noopener">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=400&q=60" alt="Festive edit" onerror="this.style.display='none'"><span class="play">▶</span><span>Festive Edit</span>
+      </a>
+    </div>
+
+    <div class="h">Find us <i>→</i></div>
+    <a class="lnk" href="https://www.instagram.com/brand.hub.in/" target="_blank" rel="noopener">
+      <span class="e"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1.2"/></svg></span>
+      <span>Instagram<small>@brand.hub.in — daily drops</small></span><span class="a">→</span>
+    </a>
+    <a class="lnk" href="https://share.google/1nJbTumfL9qczGy6j" target="_blank" rel="noopener">
+      <span class="e"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+      <span>Store Location<small>Jalandhar — Get directions</small></span><span class="a">→</span>
+    </a>
+    <button class="ghost" onclick="saveContact()">＋ Save Contact</button>
+
+    <footer>
+      Crafted by <a href="https://tushar-portfoliofinal.vercel.app/" target="_blank" rel="noopener">1eight Media</a>
+    </footer>
+  </div>
+  <div class="bar">
+    <a class="call" href="tel:+919779312001">Call Now</a>
+    <a class="wa" href="https://wa.me/919779312001?text=Hi%20Brand%20Hub!%20I%20want%20to%20shop%20your%20latest%20collection.">WhatsApp</a>
+  </div>
+</div>
+<script>
+function sharePage(){
+  const d={title:document.title,text:'Brand Hub Jalandhar — Mens, Womens & Kids Fashion',url:location.href};
+  if(navigator.share){navigator.share(d).catch(()=>{})}
+  else{navigator.clipboard.writeText(location.href);alert('Link copied!')}
+}
+function saveContact(){
+  const v=['BEGIN:VCARD','VERSION:3.0','FN:Brand Hub','ORG:Brand Hub Jalandhar','TEL;TYPE=CELL:+919779312001','URL:https://www.instagram.com/brand.hub.in/','NOTE:Mens, Womens & Kids — Clothing & Accessories','END:VCARD'].join('\n');
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));
+  a.download='brand-hub.vcf';a.click();
+}
+</script>
+</body>
+</html>
